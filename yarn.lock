@@ -21,6 +21,10 @@
     "@types/connect" "*"
     "@types/node" "*"
 
+"@types/chance@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/chance/-/chance-1.0.1.tgz#c10703020369602c40dd9428cc6e1437027116df"
+
 "@types/connect@*":
   version "3.4.32"
   resolved "https://registry.yarnpkg.com/@types/connect/-/connect-3.4.32.tgz#aa0e9616b9435ccad02bc52b5b454ffc2c70ba28"
@@ -93,6 +97,10 @@
 "@types/node@*", "@types/node@^10.5.2":
   version "10.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
+
+"@types/ramda@^0.25.34":
+  version "0.25.34"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.34.tgz#6fae4a009123c2db810711b416da9b597cc5c54c"
 
 "@types/range-parser@*":
   version "1.2.2"
@@ -191,6 +199,10 @@ chalk@^2.3.0:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
+
+chance@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/chance/-/chance-1.0.16.tgz#bd61912716b0010c3dca8e3948a960efcaa7bb1b"
 
 co@^4.6.0:
   version "4.6.0"
@@ -523,6 +535,10 @@ path-to-regexp@^1.1.1:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
   dependencies:
     isarray "0.0.1"
+
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
 resolve@^1.3.2:
   version "1.8.1"
