@@ -4,15 +4,13 @@ import { BaseMachine, State } from './BaseMachine'
 import { sum } from 'ramda'
 
 export interface ICandidate {
-  startElection ()
+  startElection (): void
   downgradeToFollower (): Follower
   upgradeToLeader (): Leader
 }
 
 export class Candidate extends BaseMachine implements ICandidate {
   state = State.Candidate
-  nextMachine: BaseMachine = null
-  timer: NodeJS.Timer
 
   async startElection () {
     // TODO set request api

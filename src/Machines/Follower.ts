@@ -3,14 +3,12 @@ import { BaseMachine } from './BaseMachine'
 import { randomTime } from '../utils'
 
 export interface IFollower {
-  startElection ()
+  startElection (): void
   upgradeToCandidate (): Candidate
-  onWithoutHeartbeat ()
+  onWithoutHeartbeat (): void
 }
 
 export class Follower extends BaseMachine implements IFollower {
-  timer: NodeJS.Timer
-  nextMachine: BaseMachine = null
 
   async startElection () {
     this.nextMachine = this.upgradeToCandidate()

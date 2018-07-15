@@ -1,12 +1,15 @@
-import { IFollower, Follower } from './Follower'
+import { Follower } from './Follower'
 import { BaseMachine } from './BaseMachine'
 
 export interface ILeader {
-  heartbeat ()
+  heartbeat (): void
   downgradeToFollower (): Follower
 }
 
 export class Leader extends BaseMachine implements ILeader {
+
+  intervalTimer: NodeJS.Timer = {} as NodeJS.Timer
+
   heartbeat () {
     // TODO
   }
@@ -24,6 +27,9 @@ export class Leader extends BaseMachine implements ILeader {
   }
 
   run () {
+    this.intervalTimer = setInterval(() => {
+      this.heartbeat()
+    }, 300)
     return new Promise((resolve) => {
       this.server.on('close', () => {
         resolve(new Leader())

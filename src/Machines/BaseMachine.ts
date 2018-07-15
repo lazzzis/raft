@@ -6,8 +6,10 @@ export interface IBaseMachine {
   state: State
   server: http.Server
   run (): Promise<BaseMachine>
-  onRequestVote ()
-  onAppendEntries ()
+  timer: NodeJS.Timer
+  nextMachine: BaseMachine
+  onRequestVote (): void
+  onAppendEntries (): void
 }
 
 export enum State {
@@ -21,6 +23,8 @@ export abstract class BaseMachine implements IBaseMachine {
   votedFor = -1
   state: State = State.Follower
   server: http.Server
+  timer: NodeJS.Timer = {} as NodeJS.Timer
+  nextMachine: BaseMachine = {} as BaseMachine
 
   constructor () {
     const app = new Koa()
@@ -44,6 +48,6 @@ export abstract class BaseMachine implements IBaseMachine {
   }
 
   abstract run (): Promise<BaseMachine>
-  abstract onRequestVote ()
-  abstract onAppendEntries ()
+  abstract onRequestVote (): void
+  abstract onAppendEntries (): void
 }
