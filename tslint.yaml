@@ -1,0 +1,17 @@
+extends: "tslint-config-standard"
+rules:
+    max-line-length:
+        options: [120]
+    new-parens: true
+    no-arg: true
+    no-bitwise: true
+    no-conditional-assignment: true
+    no-consecutive-blank-lines: false
+    arrow-parens: true
+    object-literal-shorthand: true
+    curly: true
+jsRules:
+    max-line-length:
+        options: [120]
+
+
